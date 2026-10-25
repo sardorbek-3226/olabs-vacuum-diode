@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="15%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.08"/>
+      <stop offset="85%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <linearGradient id="cathodeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="45%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+
+    <linearGradient id="anodeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="30%" stop-color="#94a3b8"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+
+    <radialGradient id="filGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#f8fafc" rx="12"/>
+  <rect x="8" y="8" width="684" height="464" fill="none" stroke="#e2e8f0" stroke-width="2" rx="10"/>
+
+  <text x="350" y="32" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">
+    1-rasm. P diodning diagrammasi (LD DIDACTIC 555 610)
+  </text>
+
+  <g transform="translate(180, 50)" filter="url(#dropShadow)">
+    <path d="M 160 30 Q 170 12 170 5 Q 170 12 180 30 Z" fill="#93c5fd" opacity="0.6"/>
+
+    <rect x="70" y="30" width="200" height="260" rx="100" fill="url(#glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+    <ellipse cx="170" cy="285" rx="70" ry="12" fill="#0f172a" opacity="0.15"/>
+
+    <path d="M 95 80 A 85 85 0 0 1 170 42" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- 4: ANOD -->
+    <ellipse cx="170" cy="110" rx="65" ry="14" fill="none" stroke="#475569" stroke-width="2.5"/>
+    <ellipse cx="170" cy="220" rx="65" ry="14" fill="none" stroke="#475569" stroke-width="2.5"/>
+    <rect x="105" y="110" width="130" height="110" fill="url(#anodeGrad)" opacity="0.45" stroke="#334155" stroke-width="2" rx="4"/>
+    <line x1="120" y1="110" x2="120" y2="220" stroke="#334155" stroke-width="1.2" stroke-dasharray="4,4"/>
+    <line x1="145" y1="110" x2="145" y2="220" stroke="#334155" stroke-width="1.2" stroke-dasharray="4,4"/>
+    <line x1="195" y1="110" x2="195" y2="220" stroke="#334155" stroke-width="1.2" stroke-dasharray="4,4"/>
+    <line x1="220" y1="110" x2="220" y2="220" stroke="#334155" stroke-width="1.2" stroke-dasharray="4,4"/>
+
+    <!-- 2: KATOD -->
+    <circle cx="170" cy="165" r="45" fill="url(#filGlow)"/>
+    <rect x="156" y="95" width="28" height="140" rx="6" fill="url(#cathodeGrad)" stroke="#b45309" stroke-width="2"/>
+    <ellipse cx="170" cy="95" rx="14" ry="4" fill="#fef08a"/>
+
+    <!-- 3: FILAMENT -->
+    <path d="M 166 108 Q 174 114 166 120 Q 174 126 166 132 Q 174 138 166 144 Q 174 150 166 156 Q 174 162 166 168 Q 174 174 166 180 Q 174 186 166 192 Q 174 198 166 204 Q 174 210 166 216" 
+          fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <line x1="164" y1="235" x2="152" y2="300" stroke="#475569" stroke-width="2.5"/>
+    <line x1="176" y1="235" x2="188" y2="300" stroke="#475569" stroke-width="2.5"/>
+
+    <!-- 5: ANODNI ULASH SIMI -->
+    <path d="M 235 130 C 265 110, 275 80, 260 55 C 245 40, 210 40, 210 25 L 210 0" 
+          fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="210" cy="0" r="5" fill="#dc2626"/>
+
+    <!-- 1: QIZDIRUVCHI VILKA -->
+    <rect x="110" y="290" width="120" height="35" rx="6" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <rect x="125" y="325" width="8" height="22" rx="2" fill="#94a3b8"/>
+    <rect x="145" y="325" width="8" height="22" rx="2" fill="#94a3b8"/>
+    <rect x="166" y="325" width="8" height="22" rx="2" fill="#94a3b8"/>
+    <rect x="187" y="325" width="8" height="22" rx="2" fill="#94a3b8"/>
+    <rect x="207" y="325" width="8" height="22" rx="2" fill="#94a3b8"/>
+  </g>
+
+  <!-- 1: Qizdiruvchi vilka -->
+  <g transform="translate(60, 395)">
+    <circle cx="16" cy="16" r="14" fill="#0284c7"/>
+    <text x="16" y="21" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="42" y="21" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">1 - Qizdiruvchi vilka (Heater pins)</text>
+    <path d="M 38 16 L 245 16 L 285 -20" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- 2: Katod plastinkasi -->
+  <g transform="translate(30, 190)">
+    <circle cx="16" cy="16" r="14" fill="#ea580c"/>
+    <text x="16" y="21" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="42" y="21" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">2 - Katod plastinkasi (Cathode cylinder)</text>
+    <path d="M 285 16 L 315 16" fill="none" stroke="#ea580c" stroke-width="1.8"/>
+    <polygon points="315,13 325,16 315,19" fill="#ea580c"/>
+  </g>
+
+  <!-- 3: Katod qizdirgich simi -->
+  <g transform="translate(30, 270)">
+    <circle cx="16" cy="16" r="14" fill="#d97706"/>
+    <text x="16" y="21" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="42" y="21" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">3 - Katod qizdirgich simi (Filament)</text>
+    <path d="M 290 16 L 335 16 L 342 -30" fill="none" stroke="#d97706" stroke-width="1.8"/>
+    <polygon points="340,-25 344,-35 348,-25" fill="#d97706"/>
+  </g>
+
+  <!-- 4: Anod -->
+  <g transform="translate(490, 180)">
+    <circle cx="16" cy="16" r="14" fill="#475569"/>
+    <text x="16" y="21" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="42" y="21" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">4 - Anod (Anode plate)</text>
+    <path d="M 0 16 L -55 16" fill="none" stroke="#475569" stroke-width="1.8"/>
+    <polygon points="-55,13 -65,16 -55,19" fill="#475569"/>
+  </g>
+
+  <!-- 5: Anodni ulash simi -->
+  <g transform="translate(490, 80)">
+    <circle cx="16" cy="16" r="14" fill="#ef4444"/>
+    <text x="16" y="21" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="42" y="21" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">5 - Anodni ulash simi (Anode lead)</text>
+    <path d="M 0 16 L -85 16 L -95 -20" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+    <polygon points="-90,-15 -96,-25 -102,-15" fill="#ef4444"/>
+  </g>
+
+  <text x="350" y="455" font-family="Inter, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    LD Didactic GmbH • P 3.8.1.1 Vakuumli diod tuzilishi diagrammasi
+  </text>
+</svg>
