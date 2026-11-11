@@ -151,7 +151,7 @@ export default function AnimationTab() {
       <div style={{ background: '#0f172a', borderRadius: 12, padding: 18, border: '1px solid #334155' }}>
         <canvas ref={canvasRef} style={{ width: '100%', height: 360, display: 'block', borderRadius: 8 }} />
 
-        <div style={{ display: 'flex', gap: 24, marginTop: 18, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div className="animation-controls" style={{ display: 'flex', gap: 24, marginTop: 18, justifyContent: 'center', flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#f8fafc', fontSize: 13 }}>
             <span>🔥 Katod harorati (T):</span>
             <input

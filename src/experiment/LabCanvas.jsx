@@ -26,6 +26,8 @@ export default function LabCanvas({ state, onUpdateState }) {
     };
 
     setupDPI();
+    const resizeObserver = new ResizeObserver(setupDPI);
+    resizeObserver.observe(canvas);
     window.addEventListener('resize', setupDPI);
 
     // Elektron zarrachalari
@@ -134,6 +136,7 @@ export default function LabCanvas({ state, onUpdateState }) {
 
     return () => {
       cancelAnimationFrame(animRef.current);
+      resizeObserver.disconnect();
       window.removeEventListener('resize', setupDPI);
     };
   }, []);

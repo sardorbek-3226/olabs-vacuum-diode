@@ -5,6 +5,16 @@ export default function ChartCanvas({ records }) {
   const canvasRef = useRef(null);
   const [chartMode, setChartMode] = useState('vax'); // 'vax' | 'loglog' | 'three_halves'
   const [hoverPoint, setHoverPoint] = useState(null);
+  const [canvasSize, setCanvasSize] = useState('');
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const observer = new ResizeObserver(([entry]) => {
+      setCanvasSize(`${entry.contentRect.width}:${entry.contentRect.height}`);
+    });
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -218,7 +228,7 @@ export default function ChartCanvas({ records }) {
       ctx.fillText(item.label, x + 10, ly + 4);
     });
 
-  }, [records, chartMode]);
+  }, [records, chartMode, canvasSize]);
 
   return (
     <div className="chart-section-card">

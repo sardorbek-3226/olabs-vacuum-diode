@@ -46,7 +46,7 @@ export default function WorkshopsPage({ onShowToast }) {
           Fizika fani o'qituvchilari va talabalar uchun virtual laboratoriya texnologiyalaridan unumli foydalanish bo'yicha amaliy mashg'ulotlar.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 18, marginBottom: 36 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 18, marginBottom: 36 }}>
           {workshops.map((w) => (
             <div key={w.id} style={{
               background: '#f8fafc',
@@ -85,7 +85,7 @@ export default function WorkshopsPage({ onShowToast }) {
               <span>Siz muvaffaqiyatli ro'yxatdan o'tdingiz. Havola va materiallar pochtangizga yuborildi.</span>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <form className="workshop-form" onSubmit={handleSubmit} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               <div>
                 <label style={{ display: 'block', fontSize: 12.5, fontWeight: 600, color: '#334155', marginBottom: 6 }}>Ismingiz:</label>
                 <input

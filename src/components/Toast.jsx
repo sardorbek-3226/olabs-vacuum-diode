@@ -9,6 +9,8 @@ export default function Toast({ message }) {
       position: 'fixed',
       bottom: 24,
       right: 24,
+      maxWidth: 'calc(100vw - 48px)',
+      overflowWrap: 'anywhere',
       background: '#0f172a',
       color: '#ffffff',
       padding: '12px 20px',
@@ -23,7 +25,7 @@ export default function Toast({ message }) {
       gap: 10,
       animation: 'slideUp 0.3s ease'
     }}>
-      <Info size={18} color="#38bdf8" />
+      <Info size={18} color="#38bdf8" style={{ flexShrink: 0 }} />
       <span>{message}</span>
     </div>
   );

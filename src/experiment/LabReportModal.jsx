@@ -16,7 +16,7 @@ export default function LabReportModal({ isOpen, onClose, state }) {
           <button className="modal-close-btn" onClick={onClose}><X size={20} /></button>
         </div>
 
-        <div style={{ border: '2px solid #0f172a', padding: 24, borderRadius: 8, background: '#ffffff' }}>
+        <div className="report-sheet" style={{ border: '2px solid #0f172a', padding: 24, borderRadius: 8, background: '#ffffff' }}>
           <div style={{ textAlign: 'center', borderBottom: '2px solid #0f172a', paddingBottom: 14, marginBottom: 18 }}>
             <h2 style={{ fontSize: 18, fontWeight: 800, margin: 0 }}>
               OLIY VA O'RTA TA'LIM VAZIRLIGI • FIZIKA KAFEDRASI
@@ -26,7 +26,7 @@ export default function LabReportModal({ isOpen, onClose, state }) {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 20 }}>
+          <div className="report-details" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 20 }}>
             <div>
               <label style={{ fontSize: 12, fontWeight: 600, color: '#64748b' }}>Talaba F.I.Sh:</label>
               <input

@@ -11,7 +11,6 @@ export default function Header({ currentPage, onNavigate }) {
             <div className="logo-badge">🔬</div>
             <div className="logo-titles">
               <h1>OLabs</h1>
-              <span>Maktab va OTMlar uchun Virtual Laboratoriya</span>
             </div>
           </div>
 
